@@ -30,8 +30,8 @@ module.exports = {
                 ]
             },
             {
-                test: /\.woff2$/,
-                use: [{ loader: 'file-loader' }]
+                test: /\.(eot|ttf|woff|woff2)$/,
+                loader: 'file-loader?name=./vendor/[name].[ext]'
 
             }
         ]
