@@ -1,4 +1,5 @@
-class PopupProfile extends Popup {
+import Popup from './Popup.js';
+export default class PopupProfile extends Popup {
     constructor(user, validation) {
         super();
         this.form = document.forms.profile;

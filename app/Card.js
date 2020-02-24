@@ -1,11 +1,11 @@
-export class Card {
+export default class Card {
     constructor() {}
     like(event) {
         event.target.classList.toggle('place-card__like-icon_liked');
     }
     remove(cardList, event) {
         event.stopPropagation();
-        listPlaces.removeChild(event.target.closest('.place-card'));
+        cardList.removeChild(event.target.closest('.place-card'));
     }
     create(name, link) {
 

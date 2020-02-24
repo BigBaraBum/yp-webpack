@@ -12,7 +12,7 @@
 <body>
     <div class="root">
         <header class="header root__section">
-            <img src="./images/logo.svg" alt="mesto logo" class="logo">
+            <img src="<%=require('./images/logo.svg').default%>" alt="mesto logo" class="logo">
         </header>
         <div class="profile root__section">
             <div class="user-info">
@@ -47,7 +47,7 @@
             </div>
             <div class="popup popup-profile ">
                 <div class="popup__content ">
-                    <img src="./images/close.svg " alt=" " class='popup__close popup-profile__close'>
+                    <img src="<%=require('./images/close.svg').default%>" alt=" " class='popup__close popup-profile__close'>
                     <h3 class="popup__title ">Редактировать профиль</h3>
                     <form action=" " class="popup__form popup-profile " name='profile'>
                         <input type="text " name="name" class="popup__input popup-profile__input_type_first-name " placeholder="Имя " value='Ivan Ivanov' autocomplete="off " minlength="2 " maxlength="30 " required>
@@ -66,15 +66,6 @@
             </div>
         </div>
     </div>
-    <script src='app/API.js'></script>
-    <script src="app/Card.js "></script>
-    <script src="app/CardList.js "></script>
-    <script src="app/Popup.js "></script>
-    <script src='app/PopupCard.js'></script>
-    <script src='app/PopupProfile.js'></script>
-    <script src='app/PopupImage.js'></script>
-    <script src='app/FormValidator.js'></script>
-    <script src='app/UserInfo.js'></script>
     <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 
 </body>

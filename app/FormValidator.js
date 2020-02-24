@@ -1,4 +1,4 @@
-class FormValidator {
+export default class FormValidator {
     constructor() {
         this.valueMissing = 'Это обязательное поле';
         this.tooShort = 'Должно быть от 2 до 30 символов';

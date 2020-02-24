@@ -1,4 +1,4 @@
-class API {
+export default class API {
     constructor(token, groupId) {
         this.token = token;
         this.groupId = groupId;
@@ -34,13 +34,13 @@ class API {
         const _body = params.body;
 
         return fetch(`${this.url}/${this.groupId}/${_url}/${_id || ''}`, {
-            method: _method,
-            headers: {
-                authorization: this.token,
-                'Content-Type': _contentType,
-            },
-            body: JSON.stringify(_body)
-        })
+                method: _method,
+                headers: {
+                    authorization: this.token,
+                    'Content-Type': _contentType,
+                },
+                body: JSON.stringify(_body)
+            })
             .then(res => {
                 if (res.ok) {
                     return res.json();

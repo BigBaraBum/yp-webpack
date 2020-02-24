@@ -1,5 +1,15 @@
 import "../pages/index.css";
-import './Card.js';
+import Card from './Card.js';
+import API from './API.js';
+import CardList from './CardList.js';
+import FormValidator from './FormValidator.js';
+import Popup from './Popup.js';
+import PopupCard from './PopupCard.js';
+import UserInfo from './UserInfo.js';
+import PopupImage from './PopupImage.js';
+import PopupProfile from './PopupProfile.js';
+
+
 const listPlaces = document.querySelector('.places-list');
 const api = new API('cdf51db9-783b-4d27-aa55-42701dc041cc', 'cohort7');
 let initialCards = null;
@@ -36,7 +46,7 @@ listPlaces.addEventListener('click', function(event) {
     } else if (event.target.classList.contains('place-card__like-icon')) {
         card.like(event);
     } else if (event.target.classList.contains('place-card__delete-icon')) {
-        card.remove(cardList, event);
+        card.remove(listPlaces, event);
     }
 })
 document.querySelector('.popup-image__close').addEventListener('click', function(event) {
