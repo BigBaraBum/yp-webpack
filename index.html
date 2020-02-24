@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mesto</title>
-    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+    <link rel="stylesheet" href="style.70f9cc8d17f147bdb08b.css">
 </head>
 
 <body>
     <div class="root">
         <header class="header root__section">
-            <img src="<%=require('./images/logo.svg').default%>" alt="mesto logo" class="logo">
+            <img src="./images/logo.svg" alt="mesto logo" class="logo">
         </header>
         <div class="profile root__section">
             <div class="user-info">
@@ -47,7 +47,7 @@
             </div>
             <div class="popup popup-profile ">
                 <div class="popup__content ">
-                    <img src="<%=require('./images/close.svg').default%>" alt=" " class='popup__close popup-profile__close'>
+                    <img src="./images/close.svg" alt=" " class='popup__close popup-profile__close'>
                     <h3 class="popup__title ">Редактировать профиль</h3>
                     <form action=" " class="popup__form popup-profile " name='profile'>
                         <input type="text " name="name" class="popup__input popup-profile__input_type_first-name " placeholder="Имя " value='Ivan Ivanov' autocomplete="off " minlength="2 " maxlength="30 " required>
@@ -66,7 +66,7 @@
             </div>
         </div>
     </div>
-    <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+    <script src="main.546511d11f492738d971.js"></script>
 
 </body>
 
