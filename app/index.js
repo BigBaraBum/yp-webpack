@@ -1,3 +1,5 @@
+import "../pages/index.css";
+
 const listPlaces = document.querySelector('.places-list');
 const api = new API('cdf51db9-783b-4d27-aa55-42701dc041cc', 'cohort7');
 let initialCards = null;
