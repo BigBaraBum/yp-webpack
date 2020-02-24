@@ -9,9 +9,10 @@ import UserInfo from './UserInfo.js';
 import PopupImage from './PopupImage.js';
 import PopupProfile from './PopupProfile.js';
 
-
+const serverUrl = NODE_ENV === 'development' ? 'http://praktikum.tk' : 'https://praktikum.tk';
+console.log(serverUrl);
 const listPlaces = document.querySelector('.places-list');
-const api = new API('cdf51db9-783b-4d27-aa55-42701dc041cc', 'cohort7');
+const api = new API('cdf51db9-783b-4d27-aa55-42701dc041cc', 'cohort7', serverUrl);
 let initialCards = null;
 const card = new Card();
 const cardList = new CardList(listPlaces, card, api);
@@ -22,9 +23,6 @@ const photoPopup = new PopupImage();
 const validation = new FormValidator();
 const profilePopup = new PopupProfile(user, validation);
 const cardPopup = new PopupCard(cardList, validation);
-
-
-
 document.querySelector('.user-info__edit-button').addEventListener('click', function(event) {
     profilePopup.open('popup-profile');
     profilePopup.setEventListeners();

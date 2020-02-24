@@ -1,10 +1,8 @@
 export default class API {
-    constructor(token, groupId) {
+    constructor(token, groupId, url) {
         this.token = token;
         this.groupId = groupId;
-        //  Надо исправить: Необходимо вынести такие параметры как IP адрес за класс и передавать 
-        // в качестве параметра при инициализации класса 
-        this.url = 'http://95.216.175.5';
+        this.url = url;
     }
     getUserInfo() {
         return this.fetch({
