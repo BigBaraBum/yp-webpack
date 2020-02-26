@@ -1,4 +1,4 @@
-class UserInfo {
+export default class UserInfo {
     constructor(api) {
         this.nameContainer = document.querySelector('.user-info__name');
         this.aboutContainter = document.querySelector('.user-info__job');

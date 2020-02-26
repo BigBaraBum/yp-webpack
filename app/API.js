@@ -1,10 +1,8 @@
-class API {
-    constructor(token, groupId) {
+export default class API {
+    constructor(token, groupId, url) {
         this.token = token;
         this.groupId = groupId;
-        //  Надо исправить: Необходимо вынести такие параметры как IP адрес за класс и передавать 
-        // в качестве параметра при инициализации класса 
-        this.url = 'http://95.216.175.5';
+        this.url = url;
     }
     getUserInfo() {
         return this.fetch({
@@ -34,13 +32,13 @@ class API {
         const _body = params.body;
 
         return fetch(`${this.url}/${this.groupId}/${_url}/${_id || ''}`, {
-            method: _method,
-            headers: {
-                authorization: this.token,
-                'Content-Type': _contentType,
-            },
-            body: JSON.stringify(_body)
-        })
+                method: _method,
+                headers: {
+                    authorization: this.token,
+                    'Content-Type': _contentType,
+                },
+                body: JSON.stringify(_body)
+            })
             .then(res => {
                 if (res.ok) {
                     return res.json();
